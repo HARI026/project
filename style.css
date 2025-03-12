@@ -1,346 +1,69 @@
-body{
-    margin: auto;
-    padding: 20px;
-}
-
-h2{
+body {
     text-align: center;
-    background-color: aqua;
-    color: red;
+    overflow: hidden;
+    position: relative;
 }
 
-.box1{
-    height: 428px;
-    width: 345px;
-    margin-top: 20px;
-    border: 2px solid black;
-    margin-left: 490px;
-    background-color: aqua;
-    border-color: black;
-    
+/* 🔹 Dividing the page into 3 equal sections with different background colors */
+.section1 {
+    position: absolute;
+    top: 0;
+    width: 33.33%;
+    height: 100vh;
+    border-right: 2px solid white;
+    background-color: black;
 }
 
-.a {
-    text-align: center;
-    padding: 30px;
-    text-decoration: dashed;
-    
-}
-
-.inner-box{
-    height: 55px;
-    width: 335px;
-    margin-top: 4px;
-    border: 2px solid black;
-    margin-left: 3px;
+.section2 {
+    position: absolute;
+    top: 0;
+    width: 33.33%;
+    height: 100vh;
+    border-right: 2px solid white;
     background-color: white;
-    border-color: black;
-    border-radius: 5px;
-    
 }
 
-.txt{
-    display:flexbox;
-    text-align: right;
-    margin-right: 6px;
-    line-height: 50px;
+.section3 {
+    position: absolute;
+    top: 0;
+    width: 33.33%;
+    height: 100vh;
+    border-right: 2px solid white;
+    background-color: black;
+}
+
+.section:last-child {
+    border-right: none; /* Remove last border */
+}
+
+/* 🔹 Marquee Text Style */
+.marquee {
+    font-size: 30px;
     font-weight: bold;
-    font-size: large;
+    position: absolute;
+    width: max-content;
+    margin-top: 100px;
+    border: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white; /* Initial color */
+    animation: bounce 5s infinite alternate ease-in-out; /* 🔥 Smooth bouncing animation */
+    transition: color 0.5s ease-in-out; /* 🔥 Smooth color transition */
 }
 
-
-
-.mini-box1{
-    height: 65px;
-    width: 85px;
-    margin-top: 11px;
-    border: 2px solid black;
-    margin-left: -2px;
-    background-color: white;
-    border-color: black;
-    text-align: center;
-    line-height: 60px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: large;
-    background-color: yellow;
+/* 🔹 Logo Styling */
+img {
+    height: 350px;
+    position: absolute;
+    margin-top: 80px;
+    margin-left: -270px;
+    border-radius: 250px;
+    box-shadow: 2px 2px 5px 5px rgba(197, 170, 14, 0.719);
 }
 
-.mini-box2{
-    height: 65px;
-    width: 85px;
-    margin-top: -69px;
-    border: 2px solid black;
-    margin-left: 89px;
-    background-color: white;
-    border-color: black;
-    text-align: center;
-    line-height: 60px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: large;
-    background-color: yellow;
-}
-
-.mini-box3{
-    height: 65px;
-    width: 85px;
-    margin-top: -69px;
-    border: 2px solid black;
-    margin-left: 180px;
-    background-color: white;
-    border-color: black;
-    text-align: center;
-    line-height: 60px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: large;
-    background-color: yellow;
-}
-
-.mini-box4{
-    height: 65px;
-    width: 62px;
-    margin-top: -69px;
-    border: 2px solid black;
-    margin-left: 271px;
-    background-color: white;
-    border-color: black;
-    text-align: center;
-    line-height: 60px;
-    border-radius: 5px;
-    font-weight: bolder;
-    font-size: 25px;
-
-    background-color: yellow;
-}
-
-.mini-box5{
-    height: 65px;
-    width: 85px;
-    margin-top: 3px;
-    border: 2px solid black;
-    margin-left: -2px;
-    background-color: white;
-    border-color: black;
-    text-align: center;
-    line-height: 60px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: large;
-}
-
-.mini-box6{
-    height: 65px;
-    width: 85px;
-    margin-top: -69px;
-    border: 2px solid black;
-    margin-left: 89px;
-    background-color: white;
-    border-color: black;
-    text-align: center;
-    line-height: 60px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: large;
-}
-
-.mini-box7{
-    height: 65px;
-    width: 85px;
-    margin-top: -69px;
-    border: 2px solid black;
-    margin-left: 180px;
-    background-color: white;
-    border-color: black;
-    text-align: center;
-    line-height: 60px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: large;
-}
-
-.mini-box8{
-    height: 65px;
-    width: 62px;
-    margin-top: -69px;
-    border: 2px solid black;
-    margin-left: 271px;
-    background-color: white;
-    border-color: black;
-    text-align: center;
-    line-height: 60px;
-    border-radius: 5px;
-    font-weight: bolder;
-    font-size: 25px;
-    background-color: yellow;
-}
-
-.mini-box9{
-    height: 65px;
-    width: 85px;
-    margin-top: 3px;
-    border: 2px solid black;
-    margin-left: -2px;
-    background-color: white;
-    border-color: black;
-    text-align: center;
-    line-height: 60px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: large;
-}
-
-.mini-box10{
-    height: 65px;
-    width: 85px;
-    margin-top: -69px;
-    border: 2px solid black;
-    margin-left: 89px;
-    background-color: white;
-    border-color: black;
-    text-align: center;
-    line-height: 60px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: large;
-}
-
-.mini-box11{
-    height: 65px;
-    width: 85px;
-    margin-top: -69px;
-    border: 2px solid black;
-    margin-left: 180px;
-    background-color: white;
-    border-color: black;
-    text-align: center;
-    line-height: 60px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: large;
-}
-
-.mini-box12{
-    height: 65px;
-    width: 62px;
-    margin-top: -69px;
-    border: 2px solid black;
-    margin-left: 271px;
-    background-color: white;
-    border-color: black;
-    text-align: center;
-    line-height: 60px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 25px;
-    background-color: yellow;
-}
-
-.mini-box13{
-    height: 65px;
-    width: 85px;
-    margin-top: 3px;
-    border: 2px solid black;
-    margin-left: -2px;
-    background-color: white;
-    border-color: black;
-    text-align: center;
-    line-height: 60px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: large;
-}
-
-.mini-box14{
-    height: 65px;
-    width: 85px;
-    margin-top: -69px;
-    border: 2px solid black;
-    margin-left: 89px;
-    background-color: white;
-    border-color: black;
-    text-align: center;
-    line-height: 60px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: large;
-}
-
-.mini-box15{
-    height: 65px;
-    width: 85px;
-    margin-top: -69px;
-    border: 2px solid black;
-    margin-left: 180px;
-    background-color: white;
-    border-color: black;
-    text-align: center;
-    line-height: 60px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: large;
-}
-
-.mini-box16{
-    height: 137px;
-    width: 62px;
-    margin-top: 219px;
-    border: 2px solid black;
-    margin-left: 276px;
-    background-color: white;
-    border-color: black;
-    text-align: center;
-    line-height: 120px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 20px;
-    background-color: yellow;
-}
-
-.mini-box17{
-    height: 65px;
-    width: 85px;
-    margin-top: 3px;
-    border: 2px solid black;
-    margin-left: -2px;
-    background-color: white;
-    border-color: black;
-    text-align: center;
-    line-height: 60px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: large;
-    background-color: pink;
-}
-
-.mini-box18{
-    height: 65px;
-    width: 85px;
-    margin-top: -69px;
-    border: 2px solid black;
-    margin-left: 89px;
-    background-color: white;
-    border-color: black;
-    text-align: center;
-    line-height: 60px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: large;
-}
-
-.mini-box19{
-    height: 65px;
-    width: 85px;
-    margin-top: -69px;
-    border: 2px solid black;
-    margin-left: 180px;
-    background-color: white;
-    border-color: black;
-    text-align: center;
-    line-height: 60px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: large;
-    background-color: skyblue;
+/* 🔥 Bouncing Animation - Moves the text left and right */
+@keyframes bounce {
+    0% { left: 8%; }
+    50% { left: 57%; transform: translateX(-50%) translateX(-50%); }
+    100% { left: 100%; transform: translateX(-85%) translateX(-75%); }
 }
