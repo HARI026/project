@@ -2,7 +2,9 @@
 <html>
     <head>
         <title>Calculator</title>
-         <link rel="icon" type="image/x-icon" href="H logo.jpg">       
+
+        <link rel="icon" type="image/x-icon" href="H logo.jpg">
+        
         <style>
 body{
     margin: auto;
@@ -18,7 +20,7 @@ h2{
 .box1{
     height: 428px;
     width: 345px;
-    margin-top: 20px;
+    margin-top: -200px;
     border: 2px solid black;
     margin-left: 490px;
     background-color: aqua;
@@ -26,12 +28,8 @@ h2{
     
 }
 
-.a {
-    text-align: center;
-    padding: 30px;
-    text-decoration: dashed;
-    
-}
+
+
 
 .inner-box{
     height: 55px;
@@ -351,6 +349,54 @@ h2{
     background-color: skyblue;
 }
 
+a{
+    color: blue;               
+  text-decoration: none;     
+  font-size: 16px;           
+  font-weight: bold; 
+  margin-left: 640px;
+  padding-top: 20px;
+        
+    
+}
+
+a:hover {
+  color: darkblue;
+  text-decoration: underline;
+}
+
+a:active {
+  color: red;
+}
+
+a:visited {
+  color: purple;
+}
+
+/* Focus state (when focused using keyboard) */
+a:focus {
+  outline: 2px solid lightblue;
+}
+
+button{
+    
+    margin-left: 1000px;
+    margin-top: 200px;
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.1); /* Makes the button larger on hover */
+}
+
+
 
         </style>
 
@@ -359,10 +405,11 @@ h2{
     <body>
         <h2>Calci</h2>
 
-        <div class="a">
+        <a href="../task2/hari.html">Task 2</a>
+    
+        <button>Visit Code</button>
 
-        <a href="hari.html">Task 2</a>
-</div>
+        
 
         <div class="box1">
             <div class="inner-box">
@@ -430,8 +477,5 @@ h2{
             </div>
         </div>
 
-       
-        
-        
-    </body>
+       </body>
 </html>
